@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>METANIT.COM</title>
+</head>
+<body>
+
+<script>
+
+         var time = prompt ('Enter the desired time in format "h.mm.ss"')
+         var distance = prompt ('Enter the desired distance  in format "km.hundreds of meters"')
+         var devided_time = time.split('.')
+
+         var hours = Number(devided_time[0])
+         var minutes = Number(devided_time[1])
+         var seconds = Number(devided_time[2])
+         var total_time = (((hours * 60) + minutes) * 60) + seconds
+         var pace = (Math.floor (total_time/distance))
+         var result_min = Math.floor(pace/60)
+         var result_sec = pace%60
+         var result_time = devided_time[0]
+
+
+</script>
+<center>
+    <button onclick="alert('you should spend no more than ' + result_min + ' minutes and ' + result_sec + ' seconds per kilometer' )">
+        Рассчитать темп
+    </button>
+</center>
+</body>
+</html>
